@@ -84,7 +84,6 @@ export const logoutUser = () => {
         fetch('http://localhost:3000/logout', 
         {
             method: 'DELETE', 
-            credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json'
             }

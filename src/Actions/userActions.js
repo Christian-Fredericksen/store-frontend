@@ -76,3 +76,28 @@ export const loginUser = (userCredentials) => {
         })
     }
 }
+
+export const logoutUser = () => {
+
+    return (dispatch) => {
+
+        fetch('http://localhost:3000/logout', 
+        {
+            method: 'DELETE', 
+            credentials: 'include', 
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        .then(resp => resp.json())
+        .then(res => {
+            localStorage.setItem("user", JSON.stringify({id: "", first_name: "", last_name: "", email: ""}))
+            localStorage.setItem("loggedIn", "false")
+            localStorage.setItem("cart", JSON.stringify({id: "", items: [], total: 0}))
+
+            dispatch(updateCart());
+            dispatch(addUser());
+        })
+    }
+}

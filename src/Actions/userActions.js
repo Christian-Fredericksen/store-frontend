@@ -5,3 +5,9 @@ export const addUser = (user) => {
         // ditch the payload and argument
     }
 }
+
+const userLogoutAction = () => {
+    return {
+        type: 'LOGOUT_USER'
+    }
+}

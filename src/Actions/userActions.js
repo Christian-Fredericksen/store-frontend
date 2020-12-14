@@ -1,3 +1,5 @@
+import updateCart from '../Components/cart';
+
 export const addUser = (user) => {
     return {
         type: 'ADD_USER',
@@ -13,7 +15,7 @@ export const registerUser = (userFormData) => {
         
         dispatch( { type: 'REGISTERING_USER'});
 
-        fetch('http://localhost:3000/users', 
+        fetch('http://localhost:3001/users', 
         {
           method: 'POST', 
           headers: {
@@ -49,7 +51,7 @@ export const loginUser = (userCredentials) => {
     
     return (dispatch) => {
 
-        fetch('http://localhost:3000/login', 
+        fetch('http://localhost:3001/login', 
         {
           method: 'POST', 
           headers: {
@@ -81,7 +83,7 @@ export const logoutUser = () => {
 
     return (dispatch) => {
 
-        fetch('http://localhost:3000/logout', 
+        fetch('http://localhost:3001/logout', 
         {
             method: 'DELETE', 
             headers: {

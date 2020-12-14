@@ -6,18 +6,18 @@ import {
   Switch
 } from "react-router-dom"; 
 
-import {logoutUser} from './actions/userActions';
-import {fetchItems} from './actions/itemActions';
-import {updateCart} from './actions/cartActions';
-import {addUser} from './actions/userActions';
+import {logoutUser} from './Actions/userActions';
+import {fetchItems} from './Actions/itemActions';
+import {updateCart} from './Actions/cartActions';
+import {addUser} from './Actions/userActions';
 // import React, { useEffect } from 'react';
 import React, { Component } from 'react';
-import Home from './containers/Home'
-import Navbar from './components/Navbar'
-import SignupPage from './containers/SignupPage';
-import LoginPage from './containers/LoginPage';
-import ItemsList from './containers/ItemsList';
-import CartPage from './containers/CartPage';
+import Home from './Containers/home'
+import Navbar from './Components/navbar'
+import SignupPage from './Containers/signUpPage';
+import LoginPage from './Containers/logInPage';
+import ItemsList from './Containers/itemsList';
+import CartPage from './Containers/cartPage';
 
 
 class App extends Component {

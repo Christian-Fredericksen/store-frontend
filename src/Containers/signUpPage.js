@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 
-import SignupForm from '../components/SignupForm';
-import {registerUser} from '../actions/userActions';
+import SignupForm from '../Components/signUpForm';
+import {registerUser} from '../Actions/userActions';
 
 const SignupPage = (props) => {
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from "react-router";
 
-import LoginForm from '../components/LoginForm';
-import {loginUser} from '../actions/userActions';
+import LoginForm from '../Components/logInForm';
+import {loginUser} from '../Actions/userActions';
 
 class LoginPage extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Cart from '../components/Cart';
-import { placeOrder, removeFromCart } from '../actions/cartActions';
+import Cart from '../Components/cart';
+import { placeOrder, removeFromCart } from '../Actions/cartActions';
 
 const CartPage = (props) => { 
     // the CartPage calls cart, and passes it a list of items in the cart, a function to handle submitting

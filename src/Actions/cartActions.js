@@ -1,6 +1,6 @@
 export const removeFromCart = (item, cartId) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/carts/${cartId}`, {
+        fetch(`http://localhost:3001/carts/${cartId}`, {
             method: 'DELETE', 
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ export const placeOrder = () => {
     
     return (dispatch) => {
        dispatch({type: 'PLACING_ORDER'})
-       fetch('http://localhost:3000/orders', {
+       fetch('http://localhost:3001/orders', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ export const updateCart = (cart) => {
 export const addItemToCart = (item, cartId) => {
     return (dispatch) => {
         dispatch({type:'ADDING_TO_CART'})
-        fetch('http://localhost:3000/carts', 
+        fetch('http://localhost:3001/carts', 
         {
           method: 'POST', 
           headers: {

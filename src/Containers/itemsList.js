@@ -5,10 +5,11 @@ import {addItemToCart} from '../Actions/cartActions'
 // import {deleteCartItem} from '../actions/cartActions
 
 const ItemsList = (props) => {
-
+    console.log("testing", props)
     const handleAddToCartClick = (item) => {
         // console.log(`Adding ${item.name} to cart`)
        props.addItemToCart(item, props.cartId) 
+       console.log(props)
     }
 
     const buttonText = "Add to cart"
@@ -26,10 +27,13 @@ const mapDispatchToProps = dispatch => ({
     addItemToCart: (item, cartId) => dispatch(addItemToCart(item, cartId))
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+    console.log('state', state)
+    console.log('test', state.items.itemList)
+    return({
      items: state.items.itemList,
      cartId: state.cart.cartId
-});
+})};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsList);

@@ -9,9 +9,10 @@ export const fetchItems = () => {
     return (dispatch) => {
         dispatch({type: 'FETCHING_ITEMS'})
         
-        fetch('http://localhost:3001/items', {credentials: 'include'}) 
+        fetch('http://localhost:3001/items') 
         .then(resp => resp.json())
         .then(resp => {
+            console.log(resp)
             dispatch(addItems(resp))
         })
     }

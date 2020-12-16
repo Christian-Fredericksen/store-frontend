@@ -12,7 +12,7 @@ export default function cartReducer(state = {
 
     const localStoredCart =  localStorage.getItem("cart") ? 
         JSON.parse(localStorage.getItem("cart")) :
-        localStorage.setItem("cart", JSON.stringify({id: "", items: [], total: 0}))
+        localStorage.setItem("cart", JSON.stringify({id: "", cartItems: []}))
         JSON.parse(localStorage.getItem("cart"))
     
     switch(action.type) {
@@ -23,7 +23,7 @@ export default function cartReducer(state = {
                 ...state,
                 cartId: localStoredCart.id,
                 cartItems: localStoredCart.items,
-                total: localStoredCart.total
+                // total: localStoredCart.total
                 // cartId: action.payload.cart.id,
                 // cartItems: action.payload.cart.items,
                 // total: action.payload.cart.total

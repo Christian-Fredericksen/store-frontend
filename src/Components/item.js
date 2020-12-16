@@ -13,7 +13,7 @@ const Item = props => {
              {/* change onClick fn name in props to be generic */}
              {/* onClick={props.handleButtonClick} */}
         </div>
-    )
+    ) 
 }
 
 

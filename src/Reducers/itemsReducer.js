@@ -14,7 +14,7 @@ export default function itemsReducer(state = {
             console.log(action.payload)
             return {
                 ...state,
-                itemList: action.payload.items,
+                itemList: action.payload,
                 fetchingItems: false
             }
         default:

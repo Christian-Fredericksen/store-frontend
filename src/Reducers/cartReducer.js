@@ -12,8 +12,8 @@ export default function cartReducer(state = {
 
     const localStoredCart =  localStorage.getItem("cart") ? 
         JSON.parse(localStorage.getItem("cart")) :
-        localStorage.setItem("cart", JSON.stringify({id: "", cartItems: []}))
-        JSON.parse(localStorage.getItem("cart"))
+        localStorage.setItem("cart", JSON.stringify({id: "", items: []}))
+        // JSON.parse(localStorage.getItem("cart"))
     
     switch(action.type) {
 
@@ -31,7 +31,7 @@ export default function cartReducer(state = {
 
         case 'ADDING_TO_CART':
             console.log('Adding items to cart')
-            return {
+            return {                
                 ...state,
                 addingItemToCart: true
             }

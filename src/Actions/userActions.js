@@ -1,4 +1,4 @@
-import updateCart from '../Components/cart';
+import {updateCart} from './cartActions';
 
 export const addUser = (user) => {
     return {

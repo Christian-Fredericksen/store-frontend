@@ -38,7 +38,8 @@ export default function cartReducer(state = {
             
         case 'PLACING_ORDER':
             console.log("placing order")
-            
+
+            break;
         default:
             return state
     }

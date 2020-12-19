@@ -5,7 +5,7 @@ const Item = props => {
         <div>
         
             <h4>{props.item.name}</h4> <br></br>
-            <img src={props.item.image}></img>
+            <img src={props.item.image}alt={"🙄"} ></img>
             <p>{props.item.description}</p>
             <p>{props.item.price}</p>
             <button type="button" onClick={props.handleButtonClick}>{props.buttonText}</button>

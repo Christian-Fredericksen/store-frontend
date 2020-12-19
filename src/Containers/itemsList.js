@@ -5,11 +5,11 @@ import {addItemToCart} from '../Actions/cartActions'
 // import {deleteCartItem} from '../actions/cartActions
 
 const ItemsList = (props) => {
-    console.log("testing", props)
+    console.log("FIRST", props)
     const handleAddToCartClick = (item) => {
-        // console.log(`Adding ${item.name} to cart`)
+        console.log(`Adding ${item.name} to cart`)
        props.addItemToCart(item, props.cartId) 
-       console.log(props)
+       console.log("LAST", props)
     }
 
     const buttonText = "Add to cart"
@@ -28,8 +28,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => {
-    console.log('state', state)
-    console.log('test', state.items.itemList)
+    console.log(state)
+    console.log(state.items.itemList)
     return({
      items: state.items.itemList,
      cartId: state.cart.cartId

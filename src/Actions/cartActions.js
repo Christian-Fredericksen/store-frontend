@@ -12,9 +12,9 @@ export const removeFromCart = (item, cartId) => {
             })
        })
        .then(resp => resp.json())
-       .then(resp => {
-        localStorage.setItem("cart", JSON.stringify(resp.cart))
-        dispatch(updateCart(resp))
+       .then(res => {
+        localStorage.setItem("cart", JSON.stringify(res.cart))
+        dispatch(updateCart(res))
         })
     }
 }

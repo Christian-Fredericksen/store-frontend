@@ -20,7 +20,7 @@ const CartPage = (props) => {
 
     return(
         <div>
-            <Cart cartItems={props.cartItems}  submitOrder={handleSubmitOrder} handleButtonClick={(item) => handleDeleteItem(item)}/>
+            <Cart cartItems={props.cartItems} total={props.total} submitOrder={handleSubmitOrder} handleButtonClick={(item) => handleDeleteItem(item)}/>
             {/* you should pass in a fn that will be passed on by Cart into item that handles deleting an item */}
             {/* handleButtonClick={handleDeleteItem(item)} */}
         </div>
@@ -36,8 +36,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
      cartItems: state.cart.cartItems,
-     cartId: state.cart.cartId,
-    //  total: state.cart.total
+     cartId: state.cart.cartId
 });
 
 

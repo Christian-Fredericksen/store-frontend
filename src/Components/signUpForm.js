@@ -9,9 +9,9 @@ const SignupForm = (props) => {
         
     return(
         <div>
-            <h4>Signup form</h4>
+            <h1>Signup form</h1>
             <form onSubmit={handleSubmit} >
-                <input onChange={handleChange} type="text" name="firstName" value={props.firstName} placeholder="First Name" />
+                <input onChange={handleChange} type="text" name="firstName" value={props.firstName} placeholder="First Name"/>
                 <input onChange={handleChange} type="text" name="lastName" value={props.lastName} placeholder="Last Name"/>
                 <input onChange={handleChange} type="email" name="email" value={props.email} placeholder="email"/>
                 <input onChange={handleChange} type="password" name="password" value={props.password} placeholder="password"/>

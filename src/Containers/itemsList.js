@@ -18,6 +18,7 @@ const ItemsList = (props) => {
     
     return(
         <div>
+            <h1>Product Page</h1>
             {items}
         </div>
     )

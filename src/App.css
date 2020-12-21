@@ -39,3 +39,63 @@
 
 
 
+body {
+  text-align: center;
+  color: white;
+  background-image: url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/131675253_10218392077620187_9143815873119091430_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=8ukRD0tH68wAX9LwBBU&_nc_ht=scontent-sjc3-1.xx&oh=2473bf6436f0dc1f39c3fa821c05d600&oe=6005675D")
+  ;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size:8rem;
+  color:  #ff69b4;
+  text-shadow: black 3px 3px 3px;
+  text-align: center;
+}
+
+h2 {
+  font-size:6rem;
+  color:  #ff69b4;
+  text-shadow: black 3px 3px 3px;
+  text-align: center;
+}
+
+button {
+  background-color:gold;
+  padding: 0px;
+  margin: 8px;
+  border: .1rem solid;
+  color: black;
+  cursor: pointer;
+  width: 4%;
+  opacity: .9;
+}
+
+input {
+  background-color:white;
+  padding: 1px 1px;
+  margin: 8px 0;
+  border: .1rem solid;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  /* width: 300px;
+  height: 500px; */
+  margin: 10px;
+  background-color: #0dff00;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+}

@@ -29,20 +29,25 @@ export const placeOrder = () => {
                 'Content-Type': 'application/json'
             }
        })
-       .then(resp => resp.json())
+       .then(res => res.json())
        .then(res => {
-            localStorage.setItem("cart", JSON.stringify(res.cart))
-            dispatch(updateCart(res))
+           console.log("from placing order action",res)
+            localStorage.setItem("order", JSON.stringify(res))
+            localStorage.setItem("cart", JSON.stringify({id: "", items: []}))
+            console.log("this is order's payload",res.order)
+            dispatch(updateCart(res.order))
         })
+        
     }
 }
 
-export const updateCart = (cart) => {
+export const updateCart = cart => {
     return {
         type: 'UPDATE_CART',
         payload: cart
     }
 }
+
 
 export const addItemToCart = (item, cartId) => {
     return (dispatch) => {
@@ -60,7 +65,7 @@ export const addItemToCart = (item, cartId) => {
         })
         .then(resp => resp.json())
         .then(res => {
-            console.log(res)
+            console.log("===================================", res)
             localStorage.setItem("cart", JSON.stringify(res.cart))
             dispatch(updateCart(res))
         })

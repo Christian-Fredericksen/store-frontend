@@ -17,6 +17,8 @@ const Navbar = props => {
                 </>
             }
             <button className="cart"><NavLink to='/cart'>Cart</NavLink></button>
+            <button className="orders"><NavLink to='/orders'> Order</NavLink></button>
+
         </div>
     )
 }

@@ -18,6 +18,8 @@ import SignupPage from './Containers/signUpPage';
 import LoginPage from './Containers/logInPage';
 import ItemsList from './Containers/itemsList';
 import CartPage from './Containers/cartPage';
+import Order from './Containers/orderPage';
+
 
 
 class App extends Component {
@@ -39,6 +41,7 @@ class App extends Component {
            <Route path="/login" component={LoginPage} />
            <Route path="/items" component={ItemsList} />
            <Route path="/cart" component={CartPage} />
+           <Route path="/orders" component={Order}/>
          </Switch>               
        </div>
      </Router>

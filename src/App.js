@@ -10,7 +10,6 @@ import {logoutUser} from './Actions/userActions';
 import {fetchItems} from './Actions/itemActions';
 import {updateCart} from './Actions/cartActions';
 import {addUser} from './Actions/userActions';
-// import React, { useEffect } from 'react';
 import React, { Component } from 'react';
 import Home from './Containers/home'
 import Navbar from './Components/navbar'

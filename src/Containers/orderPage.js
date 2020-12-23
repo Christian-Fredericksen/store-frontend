@@ -5,8 +5,6 @@ import Order from '../Components/order';
 const OrderPage = (props) =>{
     console.log("from orderpage",props)
 
- 
-
     return(
         <div>
          <Order orderList={props.orderList}/>

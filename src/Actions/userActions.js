@@ -61,8 +61,8 @@ export const loginUser = (userCredentials) => {
               user: {
                   email: email,
                   password: password
-              }
-          })
+                }
+            })
         }) 
         .then(resp => resp.json())
         .then(resp => {

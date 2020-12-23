@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Item from '../Components/item';
 import {addItemToCart} from '../Actions/cartActions'
-// import {deleteCartItem} from '../actions/cartActions
 
 const ItemsList = (props) => {
     console.log("FIRST", props)
@@ -13,7 +12,6 @@ const ItemsList = (props) => {
     }
 
     const buttonText = "Add to cart"
-
     const items = props.items.map(item => <Item item={item} handleButtonClick={() => handleAddToCartClick(item)} buttonText={buttonText}/>)
     
     return(
@@ -29,12 +27,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => {
-    console.log(state)
-    console.log(state.items.itemList)
     return({
-     items: state.items.itemList,
-     cartId: state.cart.cartId
-})};
+            items: state.items.itemList,
+            cartId: state.cart.cartId
+        }
+    )
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsList);

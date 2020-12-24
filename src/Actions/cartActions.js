@@ -1,6 +1,6 @@
 export const removeFromCart = (item, cartId) => {
     return (dispatch) => {
-        fetch(`http://localhost:3001/carts/${cartId}`, {
+        fetch(`http://localhost:3000/carts/${cartId}`, {
             method: 'DELETE', 
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ export const placeOrder = () => {
     
     return (dispatch) => {
        dispatch({type: 'PLACING_ORDER'})
-       fetch('http://localhost:3001/orders', {
+       fetch('http://localhost:3000/orders', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
@@ -31,10 +31,8 @@ export const placeOrder = () => {
        })
        .then(res => res.json())
        .then(res => {
-           console.log("from placing order action",res)
             localStorage.setItem("order", JSON.stringify(res))
             localStorage.setItem("cart", JSON.stringify({id: "", items: []}))
-            console.log("this is order's payload",res.order)
             dispatch(updateCart(res.order))
         })
         
@@ -48,11 +46,10 @@ export const updateCart = cart => {
     }
 }
 
-
 export const addItemToCart = (item, cartId) => {
     return (dispatch) => {
         dispatch({type:'ADDING_TO_CART'})
-        fetch('http://localhost:3001/carts', 
+        fetch('http://localhost:3000/carts', 
         {
           method: 'POST', 
           headers: {
@@ -65,7 +62,6 @@ export const addItemToCart = (item, cartId) => {
         })
         .then(resp => resp.json())
         .then(res => {
-            console.log("===================================", res)
             localStorage.setItem("cart", JSON.stringify(res.cart))
             dispatch(updateCart(res))
         })

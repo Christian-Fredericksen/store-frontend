@@ -15,7 +15,7 @@ export const registerUser = (userFormData) => {
         
         dispatch( { type: 'REGISTERING_USER'});
 
-        fetch('http://localhost:3001/users', 
+        fetch('http://localhost:3000/users', 
         {
           method: 'POST', 
           headers: {
@@ -51,7 +51,7 @@ export const loginUser = (userCredentials) => {
     
     return (dispatch) => {
 
-        fetch('http://localhost:3001/login', 
+        fetch('http://localhost:3000/login', 
         {
           method: 'POST', 
           headers: {
@@ -83,7 +83,7 @@ export const logoutUser = () => {
 
     return (dispatch) => {
 
-        fetch('http://localhost:3001/logout', 
+        fetch('http://localhost:3000/logout', 
         {
             method: 'DELETE', 
             headers: {

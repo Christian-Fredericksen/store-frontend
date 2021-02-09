@@ -6,7 +6,7 @@ import LoginForm from '../Components/logInForm';
 import {loginUser} from '../Actions/userActions';
 
 class LoginPage extends React.Component {
-
+ 
     state = {
         email:"",
         password: "",

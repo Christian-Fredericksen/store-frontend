@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import Logout from './logOut'
 
 const Navbar = props => {
-    console.log("this is navbar", props)  
     return (
         <div>
             <button className="home"><NavLink to='/'>Home</NavLink></button>

@@ -7,17 +7,17 @@ import {
 } from "react-router-dom"; 
 
 import {logoutUser} from './Actions/userActions';
+import {addUser} from './Actions/userActions';
 import {fetchItems} from './Actions/itemActions';
 import {updateCart} from './Actions/cartActions';
-import {addUser} from './Actions/userActions';
 import React, { Component } from 'react';
-import Home from './Containers/home'
 import Navbar from './Components/navbar'
-import SignupPage from './Containers/signUpPage';
-import LoginPage from './Containers/logInPage';
-import ItemsList from './Containers/itemsList';
 import CartPage from './Containers/cartPage';
+import Home from './Containers/home'
+import ItemsList from './Containers/itemsList';
+import LoginPage from './Containers/logInPage';
 import Order from './Containers/orderPage';
+import SignupPage from './Containers/signUpPage';
 
 
 
@@ -25,7 +25,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchItems();
-    this.props.updateCart();
+        this.props.updateCart();
     this.props.addUser();
   }
 

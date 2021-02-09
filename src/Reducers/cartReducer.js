@@ -9,7 +9,7 @@ export default function cartReducer(state = {
  
     const localStoredCart =  localStorage.getItem("cart") ? 
     JSON.parse(localStorage.getItem("cart")) :
-    localStorage.setItem("cart", JSON.stringify({id: "", caartItems: []}))
+    localStorage.setItem("cart", JSON.stringify({id: "", items: []}))
     JSON.parse(localStorage.getItem("cart"))
     switch(action.type) {
 

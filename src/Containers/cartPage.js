@@ -7,7 +7,7 @@ const CartPage = (props) => {
     const handleSubmitOrder = () => {
         props.submitOrder()
     }
-
+ 
     const handleDeleteItem = (item) => {
         props.removeFromCart(item, props.cartId)
     }

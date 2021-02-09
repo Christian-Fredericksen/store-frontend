@@ -33,7 +33,7 @@ export const registerUser = (userFormData) => {
         }) 
         .then(resp => resp.json())
         .then(resp => {
-            console.log(resp)
+            console.log(resp) 
             if(resp.logged_in === true) {
                 localStorage.setItem("user", JSON.stringify(resp.user))
                 localStorage.setItem("cart", JSON.stringify(resp.cart))
@@ -97,8 +97,8 @@ export const logoutUser = () => {
             localStorage.setItem("loggedIn", "false")
             localStorage.setItem("cart", JSON.stringify({id: "", items: [], total: 0}))
 
-            dispatch(updateCart());
-            dispatch(addUser());
+            dispatch(updateCart(res));
+            dispatch(addUser(res));
         })
     }
 }

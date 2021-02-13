@@ -5,10 +5,7 @@ import { addItemToCart } from "../Actions/cartActions";
 import SearchBar from "../Components/search";
 
 const ItemsList = (props) => {
-  console.log("from ItemsList", props);
-
   const [searchState, setSearchState] = useState("");
-  console.log("from ItemsList", searchState);
 
   const handleChange = (event) => {
     setSearchState(event.target.value);
@@ -19,7 +16,6 @@ const ItemsList = (props) => {
   };
 
   const buttonText = "Add to cart";
-  // const items = props.items.map(item => <Item key={item.id} item={item} handleButtonClick={() => handleAddToCartClick(item)} buttonText={buttonText}/>)
   const searchResults = props.items.filter((item) => {
     if (searchState == "") {
       return item;

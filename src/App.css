@@ -49,19 +49,29 @@ body {
   font-family: sans-serif;
 }
 
-h1 {
+h4 {
   font-size:8rem;
   color:  #ff69b4;
   text-shadow: black 3px 3px 3px;
   text-align: center;
+  margin-bottom: 0;
 }
 
-h2 {
+h4 {
+  font-size:6rem;
+  color:  #ff69b4;
+  text-shadow: black 3px 3px 3px;
+  text-align: center;
+  margin: 0
+}
+
+h6 {
   font-size:6rem;
   color:  #ff69b4;
   text-shadow: black 3px 3px 3px;
   text-align: center;
 }
+
 
 button {
   background-color:gold;

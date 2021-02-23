@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import Item from "../Components/item";
+import ItemPic from "../Components/item";
 import { addItemToCart } from "../Actions/cartActions";
 import SearchBar from "../Components/search";
 
-const ItemsList = (props) => {
+const ItemsList = (props) => { 
+  console.log(props)
   const [searchState, setSearchState] = useState("");
 
   const handleChange = (event) => {
-    setSearchState(event.target.value);
+    setSearchState(event.target.value); 
   };
 
   const handleAddToCartClick = (item) => {
@@ -26,7 +27,7 @@ const ItemsList = (props) => {
     }
   });
   const itemsToRender = searchResults.map((item) => (
-    <Item
+    <ItemPic 
       key={item.id}
       item={item}
       handleButtonClick={() => handleAddToCartClick(item)}

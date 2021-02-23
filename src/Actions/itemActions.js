@@ -6,7 +6,7 @@ function addItems(items) {
 }
 
 export const fetchItems = () => {
-    return (dispatch) => {
+    return (dispatch) => { 
         dispatch({type: 'FETCHING_ITEMS'})
         
         fetch('http://localhost:3000/items') 

@@ -12,6 +12,6 @@ const Order = (props) => {
             {orderList}
         </div>
     )    
-}
+} 
 
 export default Order;

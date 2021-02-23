@@ -7,9 +7,9 @@ const Cart = (props) => {
     <Item item={cartItem} handleButtonClick={() =>
         props.handleButtonClick(cartItem)} buttonText={buttonText}
     />)
-    
+     
     return(
-        <div>
+        <div> 
             <h1>Shopping Cart</h1>
               {cartItems} 
 

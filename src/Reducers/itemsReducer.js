@@ -18,7 +18,7 @@ export default function itemsReducer(state = {
                 fetchingItems: false 
             }
 
-        case 'ITEM_DETAILS':
+        case 'PRODUCT_DETAILS':
             return {
                 ...state,
                 itemList: action.payload,

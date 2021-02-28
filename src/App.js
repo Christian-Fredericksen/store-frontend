@@ -15,7 +15,7 @@ import LoginPage from "./Containers/logInPage";
 import Order from "./Containers/orderPage";
 import SignupPage from "./Containers/signUpPage";
 // import ItemShow from "./Components/itemShow";
-import {itemDetails} from "./Containers/productDetails";
+import ProductDetails from "./Containers/productDetails";
 
 class App extends Component {
   componentDidMount() {
@@ -35,7 +35,7 @@ class App extends Component {
           <Switch>
             <Route path="/signup" component={SignupPage} />
             <Route path="/login" component={LoginPage} />
-            <Route path="/items/:id" component={itemDetails} />
+            <Route path="/items/:id" component={ProductDetails} />
             <Route path="/items" component={ItemsList} />
             <Route path="/cart" component={CartPage} />
             <Route path="/orders" component={Order} />

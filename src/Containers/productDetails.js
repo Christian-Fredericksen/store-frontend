@@ -2,12 +2,16 @@ import { connect } from "react-redux";
 import { addItemToCart } from "../Actions/cartActions";
 import ItemPic from "../Components/item";
 
-export const itemDetails = (props) => { 
+export const ProductDetails = (props) => { 
   console.log("WHERE ARE MY PROPS!", props)
 
   return (
     <div>
-      <h1>Product Page</h1>
+      {/* <h1>Product Page</h1>
+      <ItemPic 
+            key={item.id}
+            item={item}
+      /> */}
     
 
       <div className="cards">Product details go here</div>
@@ -25,7 +29,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(itemDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);
 
 
 

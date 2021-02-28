@@ -5,10 +5,10 @@ function addItems(items) {
     }
 }
 
-function itemDetails(item) {
+function productDetails(items) {
     return {
         type:'PRODUCT_DETAILS',
-        payload: item
+        payload: items
     }
 }
 
@@ -21,7 +21,7 @@ export const fetchItems = () => {
         .then(resp => {
             console.log(resp)
             dispatch(addItems(resp))
-            dispatch(itemDetails(resp))
+            dispatch(productDetails(resp))
         })
     }
 }

@@ -1,9 +1,47 @@
-import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addItemToCart } from "../Actions/cartActions";
+import ItemPic from "../Components/item";
 
-export const productDetails = (props) => { 
+export const itemDetails = (props) => { 
   console.log("WHERE ARE MY PROPS!", props)
+
+  return (
+    <div>
+      <h1>Product Page</h1>
+    
+
+      <div className="cards">Product details go here</div>
+    </div>
+  );
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  addItemToCart: (item, cartId) => dispatch(addItemToCart(item, cartId)),
+});
+const mapStateToProps = (state) => {
+  return { 
+    items: state.items.item,
+    cartId: state.cart.cartId,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(itemDetails);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // const handleAddToCartClick = (item) => {
@@ -19,24 +57,3 @@ export const productDetails = (props) => {
   //     buttonText={buttonText}
   //   />
   // ));
-
-  return (
-    <div>
-      <h1>Product Page</h1>
-
-      <div className="cards">Product details go here</div>
-    </div>
-  );
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  addItemToCart: (item, cartId) => dispatch(addItemToCart(item, cartId)),
-});
-const mapStateToProps = (state) => {
-  return {
-    items: state.items.itemList,
-    cartId: state.cart.cartId,
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(productDetails);

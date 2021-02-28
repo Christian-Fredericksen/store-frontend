@@ -5,6 +5,13 @@ function addItems(items) {
     }
 }
 
+function itemDetails(item) {
+    return {
+        type:'PRODUCT_DETAILS',
+        payload: item
+    }
+}
+
 export const fetchItems = () => {
     return (dispatch) => { 
         dispatch({type: 'FETCHING_ITEMS'})
@@ -14,6 +21,7 @@ export const fetchItems = () => {
         .then(resp => {
             console.log(resp)
             dispatch(addItems(resp))
+            dispatch(itemDetails(resp))
         })
     }
 }

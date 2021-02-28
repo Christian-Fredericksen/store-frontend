@@ -9,20 +9,19 @@ import { updateCart } from "./Actions/cartActions";
 import React, { Component } from "react";
 import Navbar from "./Components/navbar";
 import CartPage from "./Containers/cartPage";
-import Home from "./Containers/home";
+import Home from "./Containers/home"; 
 import ItemsList from "./Containers/itemsList";
 import LoginPage from "./Containers/logInPage";
 import Order from "./Containers/orderPage";
 import SignupPage from "./Containers/signUpPage";
 // import ItemShow from "./Components/itemShow";
-import {productDetails} from "./Containers/productDetails";
+import {itemDetails} from "./Containers/productDetails";
 
 class App extends Component {
   componentDidMount() {
     this.props.fetchItems(); 
     this.props.updateCart();
     this.props.addUser();
-    this.props.productDetails();
   }
 
   render() {
@@ -36,7 +35,7 @@ class App extends Component {
           <Switch>
             <Route path="/signup" component={SignupPage} />
             <Route path="/login" component={LoginPage} />
-            <Route path="/items/:id" component={productDetails} />
+            <Route path="/items/:id" component={itemDetails} />
             <Route path="/items" component={ItemsList} />
             <Route path="/cart" component={CartPage} />
             <Route path="/orders" component={Order} />

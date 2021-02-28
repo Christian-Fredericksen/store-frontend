@@ -34,7 +34,7 @@ const ItemsList = (props) => {
       buttonText={buttonText}
     />
   ));
-
+ 
   return (
     <div>
       <h1>Product Page</h1>
